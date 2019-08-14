@@ -1,0 +1,11 @@
+schedules:
+- cron: '35 8 * * *'
+  displayName: 'Daily cron'
+  branches:
+    include:
+    - master
+  always: 'true'
+jobs:
+  - job: 
+    steps:
+      - script: echo "Should be triggered from a push to my-app-repo!"
